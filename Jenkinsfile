@@ -6,24 +6,25 @@ pipeline {
     }
 
     stages {
-        stage('git repo'){
+
+        stage('Git Clone') {
             steps {
-               url: "https://github.com/VenkateshJaggaraju/maven_projects.git"
+                git branch: 'main', url: 'https://github.com/VenkateshJaggaraju/maven_projects.git'
             }
             post {
                 success {
-                    echo "pull SUCCESS"
+                    echo "Pull SUCCESS"
                 }
                 failure {
-                    echo "pull FAILED"
+                    echo "Pull FAILED"
                 }
             }
         }
+
         stage('Build') {
             steps {
                 sh 'mvn clean package'
             }
-
             post {
                 success {
                     echo "Build SUCCESS"
