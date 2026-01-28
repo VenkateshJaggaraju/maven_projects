@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Git Clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/VenkateshJaggaraju/maven_projects.git'
@@ -20,7 +19,6 @@ pipeline {
                 }
             }
         }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
