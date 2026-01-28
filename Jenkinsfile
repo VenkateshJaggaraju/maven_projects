@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven "maven"
+        maven 'maven'
     }
 
     stages {
@@ -13,10 +13,10 @@ pipeline {
 
             post {
                 success {
-                    echo "build failure"
+                    echo "Build SUCCESS"
                 }
                 failure {
-                    echo "build failure"
+                    echo "Build FAILED"
                 }
             }
         }
