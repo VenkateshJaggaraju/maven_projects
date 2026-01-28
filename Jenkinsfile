@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('git repo'){
             steps {
-                git branch:"master",url:"https://github.com/VenkateshJaggaraju/maven_projects.git"
+               url: 'https://github.com/VenkateshJaggaraju/maven_projects.git'
             }
             post {
                 success {
