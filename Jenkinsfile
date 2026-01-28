@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/VenkateshJaggaraju/maven_projects.git'
+                git branch: 'master', url: 'https://github.com/VenkateshJaggaraju/maven_projects.git'
             }
             post {
                 success {
